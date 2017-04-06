@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Contacts</h1>
+<h1><%= t("activerecord.models.#{@contacts.model_name.to_s.downcase}") %></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Birthdate</th>
-      <th>Address</th>
-      <th>Email</th>
-      <th>Cellphone</th>
+      <th><%= t("activerecord.attributes.contact.name") %></th>
+      <th><%= t("activerecord.attributes.contact.birthdate") %></th>
+      <th><%= t("activerecord.attributes.contact.address") %></th>
+      <th><%= t("activerecord.attributes.contact.email") %></th>
+      <th><%= t("activerecord.attributes.contact.cellphone") %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
