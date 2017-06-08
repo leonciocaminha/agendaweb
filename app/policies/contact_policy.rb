@@ -22,4 +22,8 @@ class ContactPolicy < ApplicationPolicy
   def destroy?
     user.admin? || ( record.user.id == user.id )
   end
+
+  def export?
+    true
+  end
 end
