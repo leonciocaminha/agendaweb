@@ -5,7 +5,6 @@
     <div class="col-md-10">
       <%= f.search_field :name_cont, class: "form-control", placeholder: t('views.contacts.search_placeholder') %>
     </div>
-
     <div class="col-md-2">
       <%= button_tag type: "submit", class: "btn btn-success" do %>
         <%= fa_icon("search") %>
@@ -38,10 +37,10 @@
   <thead>
     <tr>
       <th></th>
-      <th><%= t("activerecord.attributes.contact.name") %></th>
-      <th><%= t("activerecord.attributes.contact.birthdate") %></th>
-      <th><%= t("activerecord.attributes.contact.address") %></th>
-      <th><%= t("activerecord.attributes.contact.email") %></th>
+      <th><%= sort_link @q, :name, t("activerecord.attributes.contact.name") %></th>
+      <th><%= sort_link @q, :birthdate, t("activerecord.attributes.contact.birthdate") %></th>
+      <th><%= sort_link @q, :address, t("activerecord.attributes.contact.address") %></th>
+      <th><%= sort_link @q, :email, t("activerecord.attributes.contact.email") %></th>
       <th><%= t("activerecord.attributes.contact.cellphone") %></th>
       <th><%= t("activerecord.attributes.contact.user_id") %></th>
       <th colspan="3"></th>
@@ -55,7 +54,7 @@
           <%= image_tag contact.avatar.url, class: "image-index" unless contact.avatar.blank? %>
         </td>
         <td><%= contact.name %></td>
-        <td><%= contact.birthdate %></td>
+        <td><%= l(contact.birthdate) %></td>
         <td><%= contact.address %></td>
         <td><%= contact.email %></td>
         <td><%= contact.cellphone %></td>

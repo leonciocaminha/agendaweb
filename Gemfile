@@ -51,6 +51,7 @@ gem 'prawn-table'
 gem 'rubyzip', '~> 1.1.0'
 gem 'axlsx', '2.1.0.pre'
 gem 'axlsx_rails'
+gem 'ransack'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
