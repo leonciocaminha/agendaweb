@@ -68,6 +68,15 @@ class ContactsController < ApplicationController
     end
   end
 
+  def export
+    @contacts = Contact.all
+    authorize @contacts
+    respond_to do |format|
+      format.pdf { render 'export.pdf.prawn' }
+      format.xlsx { render xlsx: 'export.xlsx.axlsx', filename:  "Contatos-#{I18n.l(Date.today)}.xlsx" }
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_contact

@@ -44,6 +44,13 @@ gem 'carrierwave'
 gem 'paper_trail'
 gem 'rails_admin', '~> 1.2'
 gem 'ransack'
+gem 'prawn'
+gem 'prawn-rails'
+gem 'prawn-table'
+
+gem 'rubyzip', '~> 1.1.0'
+gem 'axlsx', '2.1.0.pre'
+gem 'axlsx_rails'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

@@ -17,6 +17,19 @@
   </div>
 <% end %>
 
+<div class="row m-t-20">
+  <div class="col-md-6">
+    <%= link_to export_contacts_path(format: :pdf), class: 'btn btn-success', target: :_blank do %>
+      <%= fa_icon('file-pdf-o') %>
+      <%= t("views.contacts.export_to_pdf") %>
+    <% end %>
+    <%= link_to export_contacts_path(format: :xlsx), class: 'btn btn-success', target: :_blank do %>
+      <%= fa_icon('file-excel-o') %>
+      <%= t("views.contacts.export_to_xls") %>
+    <% end %>
+  </div>
+</div>
+
 <h1><%= t("activerecord.models.contact") %></h1>
 
 <%= link_to t("app.new", name: t("activerecord.models.contact")), new_contact_path, class: "btn btn-success" %>
